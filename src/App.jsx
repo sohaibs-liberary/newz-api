@@ -19,23 +19,25 @@ function App() {
     <>
 
       <div  id="allposts" className=' bg-white p-6 text-blue-500 ' >
-        <h1>News App</h1>
-        <h2 className='text-2xl font-bold'>Latest News</h2>
+        <h1 className='newzapp' >News App</h1>
+        <h2 className='latestnewz'>Latest News</h2>
+        <div className="post">
        
         {
           data.results ? data.results.map((posts , index)=>(
-            <div key={index} >
-              <h2>id:{posts.article_id}</h2>
-              <p >title:{posts.title}</p>
+            <div key={index} className='post-detail' >
+              {/* <h2>id:{posts.article_id}</h2> */}
+              <h1>{posts.title}</h1>
             {
               posts.description && <p>description: {posts.description}</p>
             }
            {
-               posts.image_url && <img src={posts.image_url} alt={posts.title} className='img w-10 h-10'/>
+               posts.image_url && <img src={posts.image_url} alt={posts.title} className='img  rounded-full'/>
 
              }
+             <br/>
              {
-
+              posts.link && <a href={posts.link}>Read More</a>
              }
               </div>
            )) : (
@@ -44,9 +46,10 @@ function App() {
             </div>
           )
         }
+        </div>
       </div>
     </>
   )
 }
 
-export default App
+export default App;
