@@ -11,14 +11,14 @@ function App() {
   }, [])
 
 
-  let post = {
-    article_id: 1,
-    title: "Sample Post Title"
-  }
+  // let post = {
+  //   article_id: 1,
+  //   title: "Sample Post Title"
+  // }
   return (
     <>
 
-      <div  className='bg-white p-6' >
+      <div  id="allposts" className=' bg-white p-6 text-blue-500 ' >
         <h1>News App</h1>
         <h2 className='text-2xl font-bold'>Latest News</h2>
        
@@ -31,13 +31,13 @@ function App() {
               posts.description && <p>description: {posts.description}</p>
             }
            {
-               posts.image_url && <img src={posts.image_url} alt={posts.title} className='w-48 h-48 object-cover'/>
+               posts.image_url && <img src={posts.image_url} alt={posts.title} className='img w-10 h-10'/>
+
              }
-             
+             {
 
-
-
-            </div>
+             }
+              </div>
            )) : (
             <div>
               <p>loading...</p>
