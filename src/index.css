@@ -55,3 +55,13 @@ a{
   font-family: 'Arial', sans-serif;
   margin-bottom: 20px;
 }
+.btn{
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
